@@ -1,0 +1,14 @@
+
+#docker run --name api-hupe-pg -e POSTGRESQL_USERNAME=docker 
+#-e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apihupe -p 5432:5432 bitnami/postgresql
+
+version: '3'
+services:
+  api-hupe-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=apihupe
