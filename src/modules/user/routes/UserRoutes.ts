@@ -7,4 +7,5 @@ export async function appRoutes(app: FastifyInstance) {
 	app.get('/users', userController.getAll.bind(userController));
 	app.get('/users/:id', userController.getById.bind(userController));
 	app.put('/users/:id', userController.update.bind(userController));
+	app.delete('/users/:id', userController.delete.bind(userController));
 }
