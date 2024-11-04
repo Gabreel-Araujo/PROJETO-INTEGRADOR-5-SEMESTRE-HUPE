@@ -25,4 +25,16 @@ export class UserController {
 			return reply.status(400).send({ error: 'An unknown error occurred' });
 		}
 	}
+
+	async getAll(request: FastifyRequest, reply: FastifyReply) {
+		try {
+			const users = await this.userService.getAllUsers();
+			return reply.status(200).send(users);
+		} catch (error) {
+			if (error instanceof Error) {
+				return reply.status(500).send({ error: error.message });
+			}
+			return reply.status(500).send({ error: 'An unknown error occurred' });
+		}
+	}
 }

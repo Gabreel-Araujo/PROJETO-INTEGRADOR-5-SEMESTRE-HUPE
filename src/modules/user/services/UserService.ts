@@ -15,4 +15,8 @@ export class UserService {
 		const newUser = await this.userRepository.createUser(data);
 		return newUser;
 	}
+
+	async getAllUsers(): Promise<User[]> {
+		return await this.userRepository.getAllUsers();
+	}
 }
