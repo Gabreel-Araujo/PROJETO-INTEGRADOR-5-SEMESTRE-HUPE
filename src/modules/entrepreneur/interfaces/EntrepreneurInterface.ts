@@ -1,12 +1,11 @@
-// interfaces/EntrepreneurInterface.ts
 export interface GetEntrepreneurByIdParams {
 	id: string;
 }
 
 export interface CreateEntrepreneurInput {
-	userId: string; // ID do usuário associado ao empreendedor
+	userId: string;
 }
 
 export interface UpdateEntrepreneurInput {
-	userId?: string; // ID do usuário, opcional para atualização
+	userId?: string;
 }

@@ -1,4 +1,3 @@
-// services/CustomerService.ts
 import { CustomerRepository } from '../repositories/CustomerRepository';
 
 export class CustomerService {

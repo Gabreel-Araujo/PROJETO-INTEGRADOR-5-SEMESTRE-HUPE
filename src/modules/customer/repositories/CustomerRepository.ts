@@ -1,4 +1,3 @@
-// repositories/CustomerRepository.ts
 import { PrismaClient, Customer } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -9,7 +8,7 @@ export class CustomerRepository {
 			data: {
 				user: { connect: { id: data.userId } },
 				orders: {
-					connect: data.orders?.map((id) => ({ id })) || [], // Conecta pedidos existentes
+					connect: data.orders?.map((id) => ({ id })) || [],
 				},
 			},
 			include: {
