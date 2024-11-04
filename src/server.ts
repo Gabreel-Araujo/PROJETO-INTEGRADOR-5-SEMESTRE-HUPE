@@ -3,7 +3,7 @@ import { env } from './env';
 app
 	.listen({
 		host: '0.0.0.0',
-		port: env.PORT,
+		port: 3000,
 	})
 	.then(() => {
 		console.log('Server running in port 3000');
