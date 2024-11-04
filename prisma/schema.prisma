@@ -20,7 +20,7 @@ model User {
   updatedAt DateTime @updatedAt
 
   entrepreneur Entrepreneur?
-  customer     Customer?     @relation(fields: [customerId], references: [id]) // Nova linha
+  customer     Customer?     @relation("UserCustomer", fields: [customerId], references: [id])
   customerId   String?       @unique
 }
 
@@ -37,14 +37,11 @@ model Entrepreneur {
 
 model Customer {
   id        String   @id @default(uuid())
-  name      String
-  email     String   @unique
-  password  String
   orders    Order[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  user User? // Novo campo para relação
+  user User? @relation("UserCustomer")
 }
 
 model Order {

@@ -1,0 +1,15 @@
+/*
+  Warnings:
+
+  - You are about to drop the column `email` on the `Customer` table. All the data in the column will be lost.
+  - You are about to drop the column `name` on the `Customer` table. All the data in the column will be lost.
+  - You are about to drop the column `password` on the `Customer` table. All the data in the column will be lost.
+
+*/
+-- DropIndex
+DROP INDEX "Customer_email_key";
+
+-- AlterTable
+ALTER TABLE "Customer" DROP COLUMN "email",
+DROP COLUMN "name",
+DROP COLUMN "password";
