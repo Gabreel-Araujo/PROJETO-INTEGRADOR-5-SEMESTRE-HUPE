@@ -1,4 +1,4 @@
-import { FastifyInstance, FastifyPluginAsync } from 'fastify';
+import { FastifyInstance } from 'fastify';
 import { UserController } from '../controllers/UserController';
 
 export async function appRoutes(app: FastifyInstance) {
