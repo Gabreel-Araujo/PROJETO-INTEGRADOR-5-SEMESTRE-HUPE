@@ -10,3 +10,7 @@ export interface User {
 }
 
 export type UserRole = 'ADMIN' | 'ENTREPRENEUR' | 'CUSTOMER';
+
+export interface GetUserByIdParams {
+	id: string;
+}

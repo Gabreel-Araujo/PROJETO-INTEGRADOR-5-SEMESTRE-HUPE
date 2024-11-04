@@ -1,6 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { UserService } from '../services/UserService';
 import { z } from 'zod';
+import { GetUserByIdParams } from '../interfaces/UserInterface';
 
 export class UserController {
 	private userService = new UserService();
@@ -30,6 +31,28 @@ export class UserController {
 		try {
 			const users = await this.userService.getAllUsers();
 			return reply.status(200).send(users);
+		} catch (error) {
+			if (error instanceof Error) {
+				return reply.status(500).send({ error: error.message });
+			}
+			return reply.status(500).send({ error: 'An unknown error occurred' });
+		}
+	}
+
+	async getById(
+		request: FastifyRequest<{ Params: GetUserByIdParams }>,
+		reply: FastifyReply,
+	) {
+		const id = request.params.id;
+
+		try {
+			const user = await this.userService.getUserById(id);
+			if (!user) {
+				return reply
+					.status(404)
+					.send({ error: 'User not found with the provided ID' });
+			}
+			return reply.status(200).send(user);
 		} catch (error) {
 			if (error instanceof Error) {
 				return reply.status(500).send({ error: error.message });

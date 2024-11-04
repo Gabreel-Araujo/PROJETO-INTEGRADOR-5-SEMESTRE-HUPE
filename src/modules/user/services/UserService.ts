@@ -19,4 +19,12 @@ export class UserService {
 	async getAllUsers(): Promise<User[]> {
 		return await this.userRepository.getAllUsers();
 	}
+
+	async getUserById(id: string): Promise<User | null> {
+		const user = await this.userRepository.getUserById(id);
+		if (!user) {
+			throw new Error('User ID Not found ');
+		}
+		return user;
+	}
 }
