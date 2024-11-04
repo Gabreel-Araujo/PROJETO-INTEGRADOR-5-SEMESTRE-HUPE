@@ -86,4 +86,24 @@ export class UserController {
 			return reply.status(400).send({ error: 'An unknown error occurred' });
 		}
 	}
+
+	async delete(
+		request: FastifyRequest<{ Params: GetUserByIdParams }>,
+		reply: FastifyReply,
+	) {
+		const id = request.params.id;
+
+		try {
+			const deletedUser = await this.userService.deleteUser(id);
+			return reply.status(200).send(deletedUser);
+		} catch (error) {
+			if (error instanceof Error) {
+				if (error.message === 'User not found') {
+					return reply.status(404).send({ error: error.message });
+				}
+				return reply.status(400).send({ error: error.message });
+			}
+			return reply.status(400).send({ error: 'An unknown error occurred' });
+		}
+	}
 }
