@@ -19,4 +19,10 @@ export class UserRepository {
 	async getAllUsers(): Promise<User[]> {
 		return await prisma.user.findMany();
 	}
+
+	async getUserById(id: string): Promise<User | null> {
+		return await prisma.user.findUnique({
+			where: { id },
+		});
+	}
 }

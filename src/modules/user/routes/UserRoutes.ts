@@ -5,4 +5,5 @@ export async function appRoutes(app: FastifyInstance) {
 	const userController = new UserController();
 	app.post('/users', userController.register.bind(userController));
 	app.get('/users', userController.getAll.bind(userController));
+	app.get('/users/:id', userController.getById.bind(userController));
 }
