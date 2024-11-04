@@ -25,4 +25,14 @@ export class UserRepository {
 			where: { id },
 		});
 	}
+
+	async updateUser(
+		id: string,
+		data: Partial<Omit<User, 'id' | 'createdAt' | 'updatedAt'>>,
+	): Promise<User> {
+		return await prisma.user.update({
+			where: { id },
+			data,
+		});
+	}
 }
