@@ -15,4 +15,8 @@ export class UserRepository {
 			data,
 		});
 	}
+
+	async getAllUsers(): Promise<User[]> {
+		return await prisma.user.findMany();
+	}
 }
