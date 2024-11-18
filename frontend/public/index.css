@@ -1,0 +1,18 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  

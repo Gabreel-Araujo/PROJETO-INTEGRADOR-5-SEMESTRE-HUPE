@@ -1,0 +1,56 @@
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    background-color: #efefef;
+  }
+  
+  .text-content {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .logo {
+    width: 80px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 1rem;
+  }
+  
+  .text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4b4b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e94444;
+  }
+  
+ .image-content{
+  max-width: 50%;
+ }
+  
+  .image-content img {
+    width: 100%;
+    
+  }
+  

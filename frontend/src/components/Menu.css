@@ -1,0 +1,95 @@
+/* Menu.css */
+
+.menu-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  
+  .menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .menu-logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: red;
+    margin: 0;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  .menu-item-details {
+    flex: 1;
+  }
+  
+  .menu-item-details h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+  }
+  
+  .menu-item-details p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .add-to-cart-button {
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #45a049;
+  }
+  
+  .menu-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .finalize-button,
+  .view-cart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .finalize-button:hover,
+  .view-cart-button:hover {
+    background-color: darkred;
+  }
+  

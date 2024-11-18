@@ -1,0 +1,91 @@
+
+.cadastro-produto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cadastro-produto-logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: 2px dashed #000;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .upload-container span {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .cadastro-produto-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .cadastro-produto-button:hover {
+    background-color: darkred;
+  }
+  
