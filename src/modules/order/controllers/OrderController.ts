@@ -5,7 +5,6 @@ import { CreateOrderBody } from '../interfaces/OrderInterface';
 export class OrderController {
 	private orderService = new OrderService();
 
-	// Usando o tipo CreateOrderBody para garantir que o corpo da requisição tenha a estrutura correta
 	async createOrder(
 		request: FastifyRequest<{ Body: CreateOrderBody }>,
 		reply: FastifyReply,
