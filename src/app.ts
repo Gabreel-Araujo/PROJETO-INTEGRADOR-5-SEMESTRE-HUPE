@@ -5,6 +5,7 @@ import { customerRoutes } from './modules/customer/routes/CustomerRoute';
 import { entrepreneurRoutes } from './modules/entrepreneur/routes/EntrepreneurRoutes';
 import { orderRoutes } from './modules/order/routes/OrderRoutes';
 import { productRoutes } from './modules/product/routes/ProductRoutes';
+import { menuRoutes } from './modules/menu/routes/MenuRoutes';
 
 export const app = fastify();
 
@@ -14,3 +15,4 @@ app.register(customerRoutes);
 app.register(entrepreneurRoutes);
 app.register(orderRoutes);
 app.register(productRoutes);
+app.register(menuRoutes);
