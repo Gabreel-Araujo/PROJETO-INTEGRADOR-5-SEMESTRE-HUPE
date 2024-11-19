@@ -77,7 +77,7 @@ npm run dev
         npm start
 A aplicação será iniciada em http://localhost:3001.
 
-## Contribuídores
+## Contribuidores
 
 - Gabriel Araujo Alves
 
