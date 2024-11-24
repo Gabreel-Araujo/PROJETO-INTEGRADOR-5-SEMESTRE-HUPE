@@ -6,6 +6,24 @@ import { GetUserByIdParams } from '../interfaces/UserInterface';
 export class UserController {
 	private userService = new UserService();
 
+	async login(request: FastifyRequest, reply: FastifyReply) {
+		const loginSchema = z.object({
+			email: z.string().email(),
+			password: z.string()
+		});
+
+		try {
+			const { email, password } = loginSchema.parse(request.body);
+			const { user, token } = await this.userService.login(email, password);
+			return reply.status(200).send({ user, token });
+		} catch (error) {
+			if (error instanceof Error) {
+				return reply.status(401).send({ error: error.message });
+			}
+			return reply.status(401).send({ error: 'Invalid credentials' });
+		}
+	}
+
 	async register(request: FastifyRequest, reply: FastifyReply) {
 		const createUserSchema = z.object({
 			name: z.string(),
@@ -60,11 +78,12 @@ export class UserController {
 			return reply.status(500).send({ error: 'An unknown error occurred' });
 		}
 	}
+
 	async update(
 		request: FastifyRequest<{ Params: GetUserByIdParams }>,
 		reply: FastifyReply,
 	) {
-		const id = request.params.id; // Agora o TypeScript reconhece que `id` é uma string
+		const id = request.params.id;
 
 		const updateUserSchema = z.object({
 			name: z.string().optional(),
