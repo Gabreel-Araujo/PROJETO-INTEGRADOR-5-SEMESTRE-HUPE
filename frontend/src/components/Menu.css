@@ -93,3 +93,6 @@
     background-color: darkred;
   }
   
+  .hiddenPerfil{
+    display: block;
+  }

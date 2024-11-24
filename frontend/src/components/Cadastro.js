@@ -53,7 +53,7 @@ const Cadastro = () => {
         await api.post('/customers', {
           userId: response.data.user.id
         });
-        navigate('/menu');
+        navigate('/login');
       }
     } catch (err) {
       console.error('Registration error:', err);
