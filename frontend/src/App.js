@@ -13,12 +13,6 @@ const Home = () => (
     <WelcomeSection />
   </div>
 );
-
-
-
-
-
-
 function App() {
   return (
     <Router>

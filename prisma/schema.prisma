@@ -1,13 +1,10 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model User {
@@ -15,7 +12,7 @@ model User {
   name      String
   email     String   @unique
   password  String
-  role      UserRole
+  role      String   // "ADMIN", "ENTREPRENEUR", or "CUSTOMER"
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -45,14 +42,14 @@ model Customer {
 }
 
 model Order {
-  id             String      @id @default(uuid())
-  status         OrderStatus
+  id             String   @id @default(uuid())
+  status         String   // "PENDING", "COMPLETED", or "CANCELLED"
   totalPrice     Float
   entrepreneurId String
   customerId     String
   orderItems     OrderItem[]
-  createdAt      DateTime    @default(now())
-  updatedAt      DateTime    @updatedAt
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   entrepreneur Entrepreneur @relation(fields: [entrepreneurId], references: [id])
   customer     Customer     @relation(fields: [customerId], references: [id])
@@ -92,16 +89,4 @@ model Menu {
   updatedAt      DateTime  @updatedAt
 
   entrepreneur Entrepreneur @relation(fields: [entrepreneurId], references: [id])
-}
-
-enum UserRole {
-  ADMIN
-  ENTREPRENEUR
-  CUSTOMER
-}
-
-enum OrderStatus {
-  PENDING
-  COMPLETED
-  CANCELLED
 }
