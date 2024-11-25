@@ -7,6 +7,7 @@ import Cadastro from "./components/Cadastro.js"
 import CadastroProduto from './components/CadastroProduto.js';
 import Menu from './components/Menu.js';
 import Carrinho from './components/Carrinho.js';
+import Perfil from './components/perfil.js';
 
 const Home = () => (
   <div>
@@ -25,6 +26,8 @@ function App() {
           <Route path="/empreendedor" element={<CadastroProduto />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/carrinho" element={<Carrinho />} />
+          <Route path="/perfil" element={<Perfil />} />
+
         </Routes>
       </div>
     </Router>
