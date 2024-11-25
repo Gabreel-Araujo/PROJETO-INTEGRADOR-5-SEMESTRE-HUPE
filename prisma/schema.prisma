@@ -12,7 +12,7 @@ model User {
   name      String
   email     String   @unique
   password  String
-  role      String   // "ADMIN", "ENTREPRENEUR", or "CUSTOMER"
+  role      String // "ADMIN", "ENTREPRENEUR", or "CUSTOMER"
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -42,14 +42,14 @@ model Customer {
 }
 
 model Order {
-  id             String   @id @default(uuid())
-  status         String   // "PENDING", "COMPLETED", or "CANCELLED"
+  id             String      @id @default(uuid())
+  status         String // "PENDING", "COMPLETED", or "CANCELLED"
   totalPrice     Float
   entrepreneurId String
   customerId     String
   orderItems     OrderItem[]
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
 
   entrepreneur Entrepreneur @relation(fields: [entrepreneurId], references: [id])
   customer     Customer     @relation(fields: [customerId], references: [id])
@@ -89,4 +89,8 @@ model Menu {
   updatedAt      DateTime  @updatedAt
 
   entrepreneur Entrepreneur @relation(fields: [entrepreneurId], references: [id])
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
 }
