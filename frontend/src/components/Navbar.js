@@ -1,9 +1,13 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; 
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
+  const location = useLocation(); // Usando o hook para pegar a URL atual
+
+  // Condicionalmente ocultar o "Perfil" em Login e Cadastro
+  const showPerfil = !['/login', '/cadastro'].includes(location.pathname);
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -16,6 +20,13 @@ const Navbar = () => {
         <li>
           <Link to="/cadastro">Cadastro</Link>
         </li>
+        
+       
+        {showPerfil && (
+          <li className="perfil-item">
+            <Link to="/perfil">Perfil</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

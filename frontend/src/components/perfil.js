@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Para redirecionar após exclusão
 import { userAPI } from "../services/apiService"; // Importando o userAPI
 import "./perfil.css";
 
 const Perfil = () => {
+  const navigate = useNavigate(); // Hook para navegação
   const [formData, setFormData] = useState({
     id: "",
     name: "",
@@ -53,6 +55,14 @@ const Perfil = () => {
     }
   };
 
+  const handleDelete = () => {
+    // Remover os dados do usuário do localStorage
+    localStorage.removeItem("user");
+
+    // Redirecionar o usuário para a página de login ou home após exclusão
+    navigate("/login"); // ou "/home" dependendo de sua lógica de navegação
+  };
+
   return (
     <div className="perfil-container">
       <h1>Meu Perfil</h1>
@@ -80,6 +90,11 @@ const Perfil = () => {
 
         <button type="submit">Salvar Alterações</button>
       </form>
+
+      {/* Botão para excluir o perfil */}
+      <button className="delete-button" onClick={handleDelete}>
+        Excluir Perfil
+      </button>
     </div>
   );
 };

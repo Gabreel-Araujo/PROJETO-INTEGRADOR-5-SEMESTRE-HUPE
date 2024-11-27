@@ -53,7 +53,7 @@ const Login = () => {
       if (user.role === 'ENTREPRENEUR') {
         navigate('/empreendedor');
       } else if (user.role === 'CUSTOMER') {
-        navigate('/menu');
+        navigate('/restaurantes');
       } else {
         navigate('/admin');
       }
