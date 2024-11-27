@@ -1,85 +1,101 @@
-# 📦 Projeto PI-HUPE
+# 🍽️ **Plataforma SaaS para Pequenos Empreendedores do Setor Alimentício**
 
-Este é o projeto **HUPE**, que utiliza tecnologias modernas para o desenvolvimento de um sistema web completo, com backend em Node.js e frontend em React.js.
+Este projeto tem como objetivo o desenvolvimento de uma **plataforma digital do tipo Software como Serviço (SaaS)**, voltada para pequenos empreendedores do setor alimentício. A solução oferece funcionalidades de **cardápio online** e **gerenciamento de pedidos**, facilitando o dia a dia dos empreendedores e proporcionando uma experiência moderna e prática para seus clientes.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ **Funcionalidades**
 
-### Backend
+### 🌐 **Cardápio Online**
+- Criação de cardápios digitais personalizados.
+- Compartilhamento de links com clientes para acesso rápido e prático.
+
+### 📦 **Gerenciamento de Pedidos**
+- Atualização de status dos pedidos (pendente, em preparo, pronto, entregue).
+- Relatórios de vendas para análise de desempenho.
+- Histórico de clientes e pedidos anteriores.
+
+---
+
+## 🎯 **Objetivo**
+O projeto busca oferecer uma solução simples, eficiente e acessível para pequenos empreendedores do setor alimentício que desejam modernizar suas operações, aumentar a eficiência operacional e melhorar a competitividade no mercado.
+
+---
+
+## 🛠️ **Tecnologias Utilizadas**
+
+### **Backend**
 - **Node.js**: Plataforma para execução de código JavaScript no servidor.
-- **Zod**: Biblioteca para validação e definição de schemas.
-- **Prisma ORM**: Utilizado para a comunicação com o banco de dados.
-- **Docker**: Ferramenta para criação e gerenciamento de containers.
-- **Docker Compose**: Orquestração de containers para facilitar o desenvolvimento.
+- **Prisma ORM**: Gerenciamento da comunicação com o banco de dados.
+- **Zod**: Validação e definição de schemas.
+- **Docker** e **Docker Compose**: Criação e orquestração de containers para simplificar o ambiente de desenvolvimento.
 
-### Frontend
-- **React.js**: Biblioteca JavaScript para criação de interfaces de usuário.
-- **CSS**: Para estilização das páginas e componentes.
-
----
-
-## 🌟 Funcionalidades do Frontend
-
-O frontend foi desenvolvido em React.js e inclui as seguintes telas:
-
-- **Cadastro de Usuário**: Tela para criação de novos usuários.
-- **Cadastro de Produtos**: Permite adicionar produtos ao sistema.
-- **Carrinho de Compras**: Exibe os itens adicionados ao carrinho.
-- **Login**: Tela de autenticação para usuários.
-- **Menu Principal**: Interface para navegação nas funcionalidades.
-- **Seção de Boas-Vindas**: Tela inicial que recebe o usuário.
-
-Cada tela foi desenvolvida com foco em usabilidade e responsividade.
+### **Frontend**
+- **React.js**: Biblioteca para construção de interfaces de usuário.
+- **CSS**: Estilização responsiva e amigável.
 
 ---
 
-## 🚀 Como Executar a Aplicação  
+## 🚀 **Como Executar o Projeto**
 
-### 📦 Requisitos  
+### **Pré-requisitos**
 Certifique-se de ter as seguintes ferramentas instaladas:
-- **Node.js** (versão 18 ou superior)  
-- **Docker** e **Docker Compose**  
-- **npm** ou **yarn** (gerenciador de pacotes)  
+- **Node.js** (versão 18 ou superior)
+- **Docker** e **Docker Compose**
+- Gerenciador de pacotes como **npm** ou **yarn**
 
----
-
-### 🔧 Configuração  
-
-1. **Clone o Repositório**  
+### **Passos para execução**
+1. **Clone o repositório**
    ```bash
    git clone <URL_DO_REPOSITORIO>
-   cd PI-HUPE
+   cd <NOME_DO_PROJETO>
+   ```
 
-### 🐳 Executando com Docker
--**🔨 Build e Inicialização**
-No diretório raiz do projeto, execute:
+2. **Execute com Docker**
+   - No diretório raiz do projeto, execute:
+     ```bash
+     docker-compose up --build
+     ```
 
-```
-docker-compose up --build
-````
-🌐 Acessando a Aplicação
-Backend: http://localhost:3000
-Frontend: http://localhost:3001
+   - Acesse:
+     - **Backend**: [http://localhost:3000](http://localhost:3000)
+     - **Frontend**: [http://localhost:3001](http://localhost:3001)
 
-### Inicie o Backend
-```
-cd backend
-npm run dev
-```
+3. **Execução manual**
+   - **Backend**
+     ```bash
+     cd backend
+     npm install
+     npm run dev
+     ```
 
-- O servidor será iniciado em http://localhost:3000.
+   - **Frontend**
+     ```bash
+     cd frontend
+     npm install
+     npm start
+     ```
 
-🚀 Inicie o Frontend
+---
 
-    ```bash
-        cd frontend
-        npm start
-A aplicação será iniciada em http://localhost:3001.
+## 📖 **Documentação Técnica**
+Para mais informações sobre a estrutura do projeto, consulte os arquivos disponíveis no repositório.
 
-## Contribuidores
+---
 
-- Gabriel Araujo Alves
+## 🤝 **Contribuidores**
 
+- **Gabriel Araujo Alves**
+- **Isabella Moreira**
 
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias.
+
+---
+
+## 🔑 **Licença**
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
+
+---
+
+💡 **Pequenos empreendedores merecem grandes soluções.** 🚀
 
