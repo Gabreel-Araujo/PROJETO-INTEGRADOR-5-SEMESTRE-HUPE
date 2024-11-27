@@ -92,10 +92,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 ---
 
-## 🔑 **Licença**
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
-
----
-
 💡 **Pequenos empreendedores merecem grandes soluções.** 🚀
 
