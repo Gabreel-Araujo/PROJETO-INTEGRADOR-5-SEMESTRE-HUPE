@@ -87,6 +87,7 @@ Para mais informações sobre a estrutura do projeto, consulte os arquivos dispo
 
 - **Gabriel Araujo Alves**
 - **Isabella Moreira**
+- **Ivan Lima**
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorias.
 
