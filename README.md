@@ -58,8 +58,8 @@ Certifique-se de ter as seguintes ferramentas instaladas:
      ```
 
    - Acesse:
-     - **Backend**: [http://localhost:3000](http://localhost:3000)
-     - **Frontend**: [http://localhost:3001](http://localhost:3001)
+     - **Backend**: [http://localhost:3000](http://localhost:3001)
+     - **Frontend**: [http://localhost:3001](http://localhost:3000)
 
 3. **Execução manual**
    - **Backend**
