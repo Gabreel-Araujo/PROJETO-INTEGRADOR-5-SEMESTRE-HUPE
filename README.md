@@ -1,6 +1,6 @@
-# 🍽️ **Plataforma SaaS para Pequenos Empreendedores do Setor Alimentício**
+# 🍽️ **HUPE - Plataforma SaaS para Pequenos Empreendedores do Setor Alimentício**
 
-Este projeto tem como objetivo o desenvolvimento de uma **plataforma digital do tipo Software como Serviço (SaaS)**, voltada para pequenos empreendedores do setor alimentício. A solução oferece funcionalidades de **cardápio online** e **gerenciamento de pedidos**, facilitando o dia a dia dos empreendedores e proporcionando uma experiência moderna e prática para seus clientes.
+Este projeto HUPE tem como objetivo o desenvolvimento de uma **plataforma digital do tipo Software como Serviço (SaaS)**, voltada para pequenos empreendedores do setor alimentício. A solução oferece funcionalidades de **cardápio online** e **gerenciamento de pedidos**, facilitando o dia a dia dos empreendedores e proporcionando uma experiência moderna e prática para seus clientes.
 
 ---
 
